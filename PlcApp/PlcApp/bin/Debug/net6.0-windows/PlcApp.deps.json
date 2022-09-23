@@ -7,10 +7,25 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "PlcApp/1.0.0": {
+        "dependencies": {
+          "S7netplus": "0.14.0",
+          "SonarAnalyzer.CSharp": "8.45.0.54064",
+          "StyleCop.Analyzers": "1.1.118"
+        },
         "runtime": {
           "PlcApp.dll": {}
         }
-      }
+      },
+      "S7netplus/0.14.0": {
+        "runtime": {
+          "lib/netstandard2.0/S7.Net.dll": {
+            "assemblyVersion": "0.14.0.0",
+            "fileVersion": "0.14.0.0"
+          }
+        }
+      },
+      "SonarAnalyzer.CSharp/8.45.0.54064": {},
+      "StyleCop.Analyzers/1.1.118": {}
     }
   },
   "libraries": {
@@ -18,6 +33,27 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "S7netplus/0.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9EExFKQhp9s/celBJHxm+ircxykLFZwz4GBk1ufiMspq8eAkidl1hsm1Rn1mUw0wAfzrxtUyJvom1NkK9xIAkg==",
+      "path": "s7netplus/0.14.0",
+      "hashPath": "s7netplus.0.14.0.nupkg.sha512"
+    },
+    "SonarAnalyzer.CSharp/8.45.0.54064": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TpLL/+BUEKzGYvXYc7rfndurRo2rAt1VuGrYg8h3gYe02+h6ffgWm9+Ak6s1k1RSCkMywjvzgUaY2X277gBbaw==",
+      "path": "sonaranalyzer.csharp/8.45.0.54064",
+      "hashPath": "sonaranalyzer.csharp.8.45.0.54064.nupkg.sha512"
+    },
+    "StyleCop.Analyzers/1.1.118": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Onx6ovGSqXSK07n/0eM3ZusiNdB6cIlJdabQhWGgJp3Vooy9AaLS/tigeybOJAobqbtggTamoWndz72JscZBvw==",
+      "path": "stylecop.analyzers/1.1.118",
+      "hashPath": "stylecop.analyzers.1.1.118.nupkg.sha512"
     }
   }
 }

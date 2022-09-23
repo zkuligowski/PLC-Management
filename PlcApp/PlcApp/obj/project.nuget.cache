@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "po7H+1WsK3pWup66a9Pq1fcynVS3kL09cUiRv8wKmiJGIHhxVQZX4mYrnjGiH3w9RdqgUpR47VBExfTuJ2lh6A==",
+  "dgSpecHash": "fcjPb+uBXG2jt7jHJpZBMeo8X0KV8y5bZxdq91qdDqA8wAwAGIqevOHYBifM72904KhICmuo7Hu51F7WsK4ziQ==",
   "success": true,
   "projectFilePath": "C:\\Repos\\PLC-Management\\PlcApp\\PlcApp\\PlcApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Zbyszek\\.nuget\\packages\\s7netplus\\0.14.0\\s7netplus.0.14.0.nupkg.sha512",
+    "C:\\Users\\Zbyszek\\.nuget\\packages\\sonaranalyzer.csharp\\8.45.0.54064\\sonaranalyzer.csharp.8.45.0.54064.nupkg.sha512",
+    "C:\\Users\\Zbyszek\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512"
+  ],
   "logs": []
 }

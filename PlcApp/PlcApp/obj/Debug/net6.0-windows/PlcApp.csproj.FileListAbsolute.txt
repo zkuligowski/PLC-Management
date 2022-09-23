@@ -19,3 +19,5 @@ C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\refint\PlcApp.dll
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\PlcApp.pdb
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\PlcApp.genruntimeconfig.cache
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\ref\PlcApp.dll
+C:\Repos\PLC-Management\PlcApp\PlcApp\bin\Debug\net6.0-windows\S7.Net.dll
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\PlcApp.csproj.CopyComplete
