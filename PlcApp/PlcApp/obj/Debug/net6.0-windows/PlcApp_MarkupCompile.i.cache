@@ -9,12 +9,12 @@ PlcApp
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Repos\PLC-Management\PlcApp\PlcApp\App.xaml
-11407045341
+C:\Repos\PLC-Management\PlcApp\PlcApp\Views\App.xaml
+1-1644662438
 
-6683474983
+6-1474394561
 195-2136462823
-MainWindow.xaml;
+Views\MainWindow.xaml;
 
 False
 

@@ -8,6 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Page Remove="Views\App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Include="Views\App.xaml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ApplicationDefinition>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="S7netplus" Version="0.14.0" />
     <PackageReference Include="SonarAnalyzer.CSharp" Version="8.45.0.54064">
       <PrivateAssets>all</PrivateAssets>
@@ -17,6 +27,12 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Views\MainWindow.xaml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
   </ItemGroup>
 
 </Project>

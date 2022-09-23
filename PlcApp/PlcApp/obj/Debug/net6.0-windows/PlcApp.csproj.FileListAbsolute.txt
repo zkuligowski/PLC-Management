@@ -4,11 +4,8 @@ C:\Repos\PLC-Management\PlcApp\PlcApp\bin\Debug\net6.0-windows\PlcApp.runtimecon
 C:\Repos\PLC-Management\PlcApp\PlcApp\bin\Debug\net6.0-windows\PlcApp.dll
 C:\Repos\PLC-Management\PlcApp\PlcApp\bin\Debug\net6.0-windows\PlcApp.pdb
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\PlcApp.csproj.AssemblyReference.cache
-C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\MainWindow.g.cs
-C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\App.g.cs
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\PlcApp_MarkupCompile.cache
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\PlcApp_MarkupCompile.lref
-C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\MainWindow.baml
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\PlcApp.g.resources
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\PlcApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\PlcApp.AssemblyInfoInputs.cache
@@ -21,3 +18,6 @@ C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\PlcApp.genruntime
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\ref\PlcApp.dll
 C:\Repos\PLC-Management\PlcApp\PlcApp\bin\Debug\net6.0-windows\S7.Net.dll
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\PlcApp.csproj.CopyComplete
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\Views\App.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\Views\MainWindow.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\Views\MainWindow.baml
