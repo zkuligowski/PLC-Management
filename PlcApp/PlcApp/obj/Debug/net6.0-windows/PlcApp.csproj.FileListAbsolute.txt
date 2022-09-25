@@ -21,3 +21,7 @@ C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\PlcApp.csproj.Cop
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\Views\App.g.cs
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\Views\MainWindow.g.cs
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\Views\MainWindow.baml
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\Views\LoginWindow.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\Views\RegistrationWindow.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\Views\LoginWindow.baml
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\Views\RegistrationWindow.baml

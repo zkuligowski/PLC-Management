@@ -23,5 +23,15 @@ namespace PlcApp
         {
             this.InitializeComponent();
         }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotSupportedException();
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotSupportedException();
+        }
     }
 }
