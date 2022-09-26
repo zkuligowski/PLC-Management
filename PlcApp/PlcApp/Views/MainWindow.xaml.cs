@@ -2,12 +2,14 @@
 
 namespace PlcApp
 {
+    using PlcApp.Views;
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
     using System.Windows;
+    using System.Windows.Threading;
     using System.Windows.Controls;
     using System.Windows.Data;
     using System.Windows.Documents;
@@ -31,7 +33,8 @@ namespace PlcApp
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotSupportedException();
+            var registrationWindow = new RegistrationWindow();
+            Dispatcher.Invoke(registrationWindow.ShowDialog);
         }
     }
 }

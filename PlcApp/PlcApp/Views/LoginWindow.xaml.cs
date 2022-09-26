@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlcApp.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,10 @@ namespace PlcApp.Views
         public LoginWindow()
         {
             InitializeComponent();
+        }
+
+        private void loginButton_Click(object sender, RoutedEventArgs e)
+        {
         }
     }
 }

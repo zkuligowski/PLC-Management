@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlcApp.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,20 @@ namespace PlcApp.Views
         public RegistrationWindow()
         {
             InitializeComponent();
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataAccess db = new DataAccess();
+            db.AddNewUser(
+                this.firstNameText.Text,
+                this.surnameText.Text,
+                this.emailText.Text,
+                this.birthDateDatePicker.Text,
+                this.mobileNumberText.Text,
+                this.usernameText.Text,
+                this.passwordText.Password.ToString(),
+                this.rightsLevelComboBox.Text);
         }
     }
 }
