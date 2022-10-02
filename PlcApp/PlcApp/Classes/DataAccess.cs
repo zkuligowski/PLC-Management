@@ -3,6 +3,7 @@ namespace PlcApp.Classes
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.Data;
     using System.Data.SqlClient;
     using System.Linq;
@@ -31,6 +32,15 @@ namespace PlcApp.Classes
                 users.Add(newUser);
 
                 connection.Execute("dbo.insertUser @FirstName, @Surname, @Email, @BirthDate, @MobileNumber, @Username, @Password, @RightsLevel", users);
+            }
+        }
+
+        public List<Person> GetUserFromDB(string username, string password)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("UsersDB")))
+            {
+                var output = connection.Query<Person>("dbo.GetByUsernameAndPassword @UserName, @Email, @Password", new { Username = username, Email = username, Password = password }).ToList();
+                return output;
             }
         }
     }

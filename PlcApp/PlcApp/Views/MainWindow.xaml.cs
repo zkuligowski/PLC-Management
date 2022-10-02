@@ -15,7 +15,8 @@ namespace PlcApp
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotSupportedException();
+            var loginWindow = new LoginWindow();
+            this.Dispatcher.Invoke(loginWindow.ShowDialog);
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
