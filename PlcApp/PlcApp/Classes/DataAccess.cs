@@ -14,7 +14,7 @@ namespace PlcApp.Classes
     {
         public void AddNewUser(string firstName, string surname, string email, string birthDate, string mobileNumber, string username, string password, string rightslevel)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("UserDB")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("UsersDB")))
             {
                 Person newUser = new Person
                 {
@@ -25,7 +25,7 @@ namespace PlcApp.Classes
                     MobileNumber = mobileNumber,
                     UserName = username,
                     Password = password,
-                    RithtsLevel = rightslevel,
+                    RightsLevel = rightslevel,
                 };
                 List<Person> users = new List<Person>();
                 users.Add(newUser);
