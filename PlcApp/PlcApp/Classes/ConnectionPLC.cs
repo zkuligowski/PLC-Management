@@ -2,13 +2,7 @@
 
 namespace PlcApp.Classes
 {
-    using PlcApp.Views;
     using S7.Net;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
     public class ConnectionPLC
     {
@@ -20,9 +14,6 @@ namespace PlcApp.Classes
 
                 ReadSingleVariable(plc);
                 WriteSingleVariable(plc);
-                //plc.Write("DB1.DBX0.0", 1);
-                //byte[] db1Bytes = new byte[18];
-                //plc.WriteBytes(DataType.DataBlock, 1, 0, db1Bytes);
             }
         }
 
@@ -40,8 +31,14 @@ namespace PlcApp.Classes
 
         public void WriteSingleVariable(Plc plc)
         {
-            bool b1 = true;
-            plc.Write("DB1.DBX0.0", 0);
+            plc.Write("DB1.DBX0.0", 1);
+            plc.Write("DB1.DBX0.1", 1);
+            plc.Write("DB1.DBW2.0", (ushort)69);
+            plc.Write("DB1.DBD4.0", 21.37);
+            plc.Write("DB1.DBD8.0", 123123);
+            plc.Write("DB1.DBD12.0", (uint)123123);
+            plc.Write("DB1.DBW16.0", (ushort)12312);
+
         }
     }
 }
