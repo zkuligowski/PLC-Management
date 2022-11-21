@@ -33,6 +33,8 @@ namespace PlcApp.Views
             if (users.Count == 1)
             {
                 this.Close();
+                ////var scadaWindow = new SCADA();
+                ////scadaWindow.ShowDialog();
             }
             else
             {

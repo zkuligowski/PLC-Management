@@ -11,6 +11,8 @@ namespace PlcApp
         public MainWindow()
         {
             this.InitializeComponent();
+            var scadaWindow = new SCADA();
+            scadaWindow.ShowDialog();
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Repos\PLC-Management\PlcApp\PlcApp\Views\App.xaml
-3-987853446
+41093027767
 
-121791565530
+14538127825
 198-1998974208
-Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\RegistrationWindow.xaml;
+Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\RegistrationWindow.xaml;Views\SCADA.xaml;
 
 False
 

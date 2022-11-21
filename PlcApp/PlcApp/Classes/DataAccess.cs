@@ -39,7 +39,9 @@ namespace PlcApp.Classes
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("UsersDB")))
             {
-                var output = connection.Query<Person>("dbo.GetByUsernameAndPassword @UserName, @Email, @Password", new { Username = username, Email = username, Password = password }).ToList();
+                var output = connection.Query<Person>(
+                    "dbo.GetByUsernameAndPassword @UserName, @Email, @Password",
+                    new { Username = username, Email = username, Password = password }).ToList();
                 return output;
             }
         }
