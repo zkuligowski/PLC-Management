@@ -1,18 +1,10 @@
 ﻿using PlcApp.Classes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using S7.Net;
+using S7.Net.Types;
+using System.Globalization;
 
 namespace PlcApp.Views
 {
@@ -21,17 +13,18 @@ namespace PlcApp.Views
     /// </summary>
     public partial class SCADA : Window
     {
+        private ConnectionPLC connectionPLC;
+
         public SCADA()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ConnectPLC_Click(object sender, RoutedEventArgs e)
         {
-            ConnectionPLC connectionPLC = new ConnectionPLC();
             try
             {
-                connectionPLC.ConnectToPLC(this.IPAdressText.Text);
+                this.connectionPLC = new ConnectionPLC(this.IPAdressText.Text);
             }
             catch (Exception ex)
             {
@@ -39,12 +32,40 @@ namespace PlcApp.Views
             }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void WritePLC_Click(object sender, RoutedEventArgs e)
         {
+            bool bool1 = Convert.ToBoolean(this.bool1Txt.Text);
+            bool bool2 = Convert.ToBoolean(this.bool2Txt.Text);
+            ushort intVariable = (ushort)Convert.ToInt16(this.intTxt.Text);
+            var realVariable = float.Parse(this.realTxt.Text, CultureInfo.InvariantCulture.NumberFormat).ConvertToUInt();
+            int dIntVariable = Convert.ToInt32(this.dIntTxt.Text);
+            uint dWordVariable = Convert.ToUInt32(this.dWordTxt.Text);
+            ushort wordVariable = Convert.ToUInt16(this.wordTxt.Text);
+
+            this.connectionPLC.WriteSingleVariables(
+                bool1,
+                bool2,
+                intVariable,
+                realVariable,
+                dIntVariable,
+                dWordVariable,
+                wordVariable);
         }
 
         private void InputTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+        }
+
+        private void ReadPLC_Click(object sender, RoutedEventArgs e)
+        {
+            var db1 = this.connectionPLC.ReadSingleVariables();
+            this.bool1Txt.Text = db1.Bool1.ToString();
+            this.bool2Txt.Text = db1.Bool2.ToString();
+            this.intTxt.Text = db1.IntVariable.ToString();
+            this.realTxt.Text = db1.RealVariable.ToString();
+            this.dIntTxt.Text = db1.DIntVariable.ToString();
+            this.dWordTxt.Text = db1.DWordVariable.ToString();
+            this.wordTxt.Text = db1.WordVariable.ToString();
         }
     }
 }

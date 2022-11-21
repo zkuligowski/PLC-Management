@@ -7,11 +7,25 @@
         mc:Ignorable="d"
         Title="SCADA" Height="450" Width="800">
     <Grid>
-        <TextBlock x:Name="IPAdressLabel" HorizontalAlignment="Left" Height="24" Margin="48,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.079,0.529"><Run Language="pl-pl" Text="IP Adress:"/></TextBlock>
+        <TextBlock x:Name="IPAdressLbl" HorizontalAlignment="Left" Height="24" Margin="48,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.079,0.529"><Run Language="pl-pl" Text="IP Adress:"/></TextBlock>
         <TextBox x:Name="IPAdressText" HorizontalAlignment="Left" Height="38" Margin="48,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" Text="192.168.0.50"/>
-        <Button x:Name="ConnectPLCButton" Content="Connect" HorizontalAlignment="Left" Height="38" Margin="48,147,0,0" VerticalAlignment="Top" Width="154" Click="Button_Click"/>
-        <Button x:Name="WritePLCButton" Content="Write" HorizontalAlignment="Left" Height="58" Margin="461,246,0,0" VerticalAlignment="Top" Width="131" Click="Button_Click_1"/>
-        <TextBox x:Name="InputTextBox" HorizontalAlignment="Left" Height="51" Margin="461,166,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="166" TextChanged="InputTextBox_TextChanged"/>
+        <Button x:Name="ConnectPLCButton" Content="Connect" HorizontalAlignment="Left" Height="38" Margin="48,147,0,0" VerticalAlignment="Top" Width="154" Click="ConnectPLC_Click"/>
+        <Button x:Name="WritePLCBtn" Content="Write" HorizontalAlignment="Left" Height="58" Margin="601,269,0,0" VerticalAlignment="Top" Width="131" Click="WritePLC_Click"/>
+        <TextBox x:Name="bool1Txt" HorizontalAlignment="Left" Height="26" Margin="536,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" TextChanged="InputTextBox_TextChanged"/>
+        <TextBox x:Name="bool2Txt" HorizontalAlignment="Left" Height="26" Margin="536,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" TextChanged="InputTextBox_TextChanged"/>
+        <TextBox x:Name="intTxt" HorizontalAlignment="Left" Height="26" Margin="536,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" TextChanged="InputTextBox_TextChanged" RenderTransformOrigin="0.496,3.232"/>
+        <TextBox x:Name="realTxt" HorizontalAlignment="Left" Height="26" Margin="536,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" TextChanged="InputTextBox_TextChanged" RenderTransformOrigin="0.481,4.078"/>
+        <TextBox x:Name="dIntTxt" HorizontalAlignment="Left" Height="26" Margin="536,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" TextChanged="InputTextBox_TextChanged"/>
+        <TextBox x:Name="dWordTxt" HorizontalAlignment="Left" Height="26" Margin="536,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" TextChanged="InputTextBox_TextChanged"/>
+        <TextBox x:Name="wordTxt" HorizontalAlignment="Left" Height="26" Margin="536,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="130" TextChanged="InputTextBox_TextChanged"/>
+        <Button x:Name="ReadPLCBtn" Content="Read" HorizontalAlignment="Left" Height="58" Margin="433,269,0,0" VerticalAlignment="Top" Width="131" Click="ReadPLC_Click"/>
+        <TextBlock x:Name="bool1Lbl" HorizontalAlignment="Left" Height="24" Margin="433,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.079,0.529" Text="Bool1:"/>
+        <TextBlock x:Name="bool2Lbl" HorizontalAlignment="Left" Height="24" Margin="433,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.079,0.529" Text="Bool2:"/>
+        <TextBlock x:Name="intLbl" HorizontalAlignment="Left" Height="24" Margin="433,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.079,0.529" Text="Int:"/>
+        <TextBlock x:Name="realLbl" HorizontalAlignment="Left" Height="24" Margin="433,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.079,0.529" Text="Real:"/>
+        <TextBlock x:Name="dintLbl" HorizontalAlignment="Left" Height="24" Margin="433,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.079,0.529" Text="Dint:"/>
+        <TextBlock x:Name="dwordLbl" HorizontalAlignment="Left" Height="24" Margin="433,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.079,0.529" Text="DWord:"/>
+        <TextBlock x:Name="wordLbl" HorizontalAlignment="Left" Height="24" Margin="433,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="80" RenderTransformOrigin="0.079,0.529" Text="Word:"/>
 
     </Grid>
 </Window>
