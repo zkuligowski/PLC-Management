@@ -1,4 +1,4 @@
-﻿
+﻿// Copyright Zbigniew Kuligowski. All Rights Reserved.
 
 namespace PlcApp.Classes
 {
@@ -6,12 +6,17 @@ namespace PlcApp.Classes
 
     public class ConnectionPLC
     {
-        public Plc? plc;
+        private readonly Plc? plc;
 
         public ConnectionPLC(string ipAdress)
         {
             this.plc = new Plc(CpuType.S71200, ipAdress, 0, 1);
             this.plc.Open();
+        }
+
+        public void DisconnectPLC()
+        {
+            this.plc.Close();
         }
 
         public Db1 ReadSingleVariables()

@@ -11,8 +11,8 @@
             <ColumnDefinition Width="279*"/>
             <ColumnDefinition Width="121*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="loginButton" Content="Log in" HorizontalAlignment="Left" Height="67" Margin="195,304,0,0" VerticalAlignment="Top" Width="145" Click="loginButton_Click" />
-        <Button x:Name="cancelButton" Content="Cancel" HorizontalAlignment="Left" Height="67" Margin="412,304,0,0" VerticalAlignment="Top" Width="145" Click="cancelButton_Click"/>
+        <Button x:Name="loginButton" Content="Log in" HorizontalAlignment="Left" Height="67" Margin="195,304,0,0" VerticalAlignment="Top" Width="145" Click="LoginButton_Click" />
+        <Button x:Name="cancelButton" Content="Cancel" HorizontalAlignment="Left" Height="67" Margin="412,304,0,0" VerticalAlignment="Top" Width="145" Click="CancelButton_Click"/>
         <TextBox x:Name="usernameText" HorizontalAlignment="Left" Height="49" Margin="268,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="216"/>
         <PasswordBox x:Name="passwordText" HorizontalAlignment="Left" Height="52" Margin="268,0,0,0" VerticalAlignment="Center" Width="216"/>
         <TextBlock HorizontalAlignment="Left" Height="59" Margin="97,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="585" Grid.ColumnSpan="2"><Run Language="pl-pl" Text="Type username and password."/></TextBlock>

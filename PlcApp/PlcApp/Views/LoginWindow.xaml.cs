@@ -1,4 +1,4 @@
-﻿
+﻿// Copyright Zbigniew Kuligowski. All Rights Reserved.
 
 namespace PlcApp.Views
 {
@@ -14,10 +14,10 @@ namespace PlcApp.Views
     {
         public LoginWindow()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
-        private void loginButton_Click(object sender, RoutedEventArgs e)
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             DataAccess db = new DataAccess();
             List<Person> users = new ();
@@ -33,8 +33,6 @@ namespace PlcApp.Views
             if (users.Count == 1)
             {
                 this.Close();
-                ////var scadaWindow = new SCADA();
-                ////scadaWindow.ShowDialog();
             }
             else
             {
@@ -42,7 +40,7 @@ namespace PlcApp.Views
             }
         }
 
-        private void cancelButton_Click(object sender, RoutedEventArgs e)
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

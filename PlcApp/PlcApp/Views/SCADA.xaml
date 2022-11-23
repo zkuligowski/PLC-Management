@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="SCADA" Height="450" Width="800">
     <Grid>
-        <TextBlock x:Name="IPAdressLbl" HorizontalAlignment="Left" Height="24" Margin="48,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.079,0.529"><Run Language="pl-pl" Text="IP Adress:"/></TextBlock>
-        <TextBox x:Name="IPAdressText" HorizontalAlignment="Left" Height="38" Margin="48,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" Text="192.168.0.50"/>
-        <Button x:Name="ConnectPLCButton" Content="Connect" HorizontalAlignment="Left" Height="38" Margin="48,147,0,0" VerticalAlignment="Top" Width="154" Click="ConnectPLC_Click"/>
+        <TextBlock x:Name="IPAddressLbl" HorizontalAlignment="Left" Height="24" Margin="48,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.079,0.529"><Run Language="pl-pl" Text="IP Address:"/></TextBlock>
+        <TextBox x:Name="IPAddressTxt" HorizontalAlignment="Left" Height="38" Margin="48,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" Text="192.168.0.50"/>
+        <Button x:Name="ConnectPLCbtn" Content="Connect" HorizontalAlignment="Left" Height="39" Margin="48,147,0,0" VerticalAlignment="Top" Width="113" Click="ConnectPLC_Click"/>
         <Button x:Name="WritePLCBtn" Content="Write" HorizontalAlignment="Left" Height="58" Margin="601,269,0,0" VerticalAlignment="Top" Width="131" Click="WritePLC_Click"/>
         <TextBox x:Name="bool1Txt" HorizontalAlignment="Left" Height="26" Margin="536,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" TextChanged="InputTextBox_TextChanged"/>
         <TextBox x:Name="bool2Txt" HorizontalAlignment="Left" Height="26" Margin="536,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" TextChanged="InputTextBox_TextChanged"/>
@@ -26,6 +26,7 @@
         <TextBlock x:Name="dintLbl" HorizontalAlignment="Left" Height="24" Margin="433,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.079,0.529" Text="Dint:"/>
         <TextBlock x:Name="dwordLbl" HorizontalAlignment="Left" Height="24" Margin="433,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.079,0.529" Text="DWord:"/>
         <TextBlock x:Name="wordLbl" HorizontalAlignment="Left" Height="24" Margin="433,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="80" RenderTransformOrigin="0.079,0.529" Text="Word:"/>
+        <Button x:Name="DisconnectPLCbtn" Content="Disconnect" HorizontalAlignment="Left" Height="39" Margin="200,147,0,0" VerticalAlignment="Top" Width="113" Click="DisconnectPLC_Click" IsEnabled="False"/>
 
     </Grid>
 </Window>

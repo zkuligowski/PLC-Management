@@ -1,4 +1,5 @@
-﻿
+﻿// Copyright Zbigniew Kuligowski. All Rights Reserved.
+
 namespace PlcApp.Classes
 {
     using System.Configuration;

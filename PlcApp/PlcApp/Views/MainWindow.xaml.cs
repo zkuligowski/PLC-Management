@@ -1,8 +1,7 @@
-﻿// Copyright (c) Zbigniew Kuligowski. All rights reserved.
+﻿// Copyright Zbigniew Kuligowski. All Rights Reserved.
 
 namespace PlcApp
 {
-    using System;
     using System.Windows;
     using PlcApp.Views;
 
@@ -11,8 +10,6 @@ namespace PlcApp
         public MainWindow()
         {
             this.InitializeComponent();
-            var scadaWindow = new SCADA();
-            scadaWindow.ShowDialog();
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
@@ -25,6 +22,17 @@ namespace PlcApp
         {
             var registrationWindow = new RegistrationWindow();
             this.Dispatcher.Invoke(registrationWindow.ShowDialog);
+        }
+
+        private void RunApp_Click(object sender, RoutedEventArgs e)
+        {
+            var scadaWindow = new SCADA();
+            scadaWindow.ShowDialog();
+        }
+
+        private void CloseMainWindow_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

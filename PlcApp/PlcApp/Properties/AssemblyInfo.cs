@@ -1,3 +1,5 @@
+// Copyright Zbigniew Kuligowski. All Rights Reserved.
+
 using System.Windows;
 
 [assembly: ThemeInfo(

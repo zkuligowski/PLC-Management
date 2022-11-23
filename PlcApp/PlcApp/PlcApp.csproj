@@ -8,10 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Properties\stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Page Remove="Views\App.xaml" />
   </ItemGroup>
 
   <ItemGroup>
+    <AdditionalFiles Include="Properties\stylecop.json" />
     <ApplicationDefinition Include="Views\App.xaml">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ApplicationDefinition>
