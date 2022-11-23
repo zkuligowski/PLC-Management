@@ -10,63 +10,22 @@ namespace PlcApp.Classes
     using DotNetSiemensPLCToolBoxLibrary.DataTypes;
     using System.Diagnostics;
     using System.Collections.Generic;
-
+    using Sharp7;
+    
     public class ConnectionPLC
     {
         private readonly Plc? plc;
         private PLCConnection _plcConnection;
+        private readonly S7Client _s7Plc;
+        private byte[] _inBuffer = new byte[200];
 
         public ConnectionPLC(string ipAdress)
         {
-            var cfg = new PLCConnectionConfiguration
-            {
-                CpuIP = ipAdress,
-                Port = 102,
-                CpuRack = 0,
-                CpuSlot = 1,
-                TimeoutIPConnect = TimeSpan.FromSeconds(5),
-                Timeout = TimeSpan.FromSeconds(5),
-                ConnectionType = LibNodaveConnectionTypes.ISO_over_TCP,
-                ConnectionName = "S7_Connection",
-                Routing = false,
-                RoutingDestinationRack = 0,
-                RoutingDestinationSlot = 0,
-                RoutingDestination = string.Empty,
-            };
-
-            cfg.SaveConfiguration();
-
-            this._plcConnection = new PLCConnection(cfg);
-
-            this._plcConnection.Connect();
-
-            var testconnection = this._plcConnection.Connected;
-
-            var bool1 = new PLCTag("DB1.DBX0.0", TagDataType.Bool) { Value = 0 };
-            var bool2 = new PLCTag("DB1.DBX0.0", TagDataType.Bool) { Value = 0 };
-            var db1IntVariable = new PLCTag("DB1.DBW2.0", TagDataType.Int) { Value = 51 };
-            var db1RealVariable = new PLCTag("DB1.DBD4.0", TagDataType.Float) { Value = 25.40 };
-            var db1DintVariable = new PLCTag("DB1.DBD8.0", TagDataType.Dint) { Value = 123451 };
-            var db1DWordVariable = new PLCTag("DB1.DBD12.0", TagDataType.Dword) { Value = 123451 };
-            var db1WordVariable = new PLCTag("DB1.DBW16.0", TagDataType.Word) { Value = 12341 };
-
-            this._plcConnection.WriteValue(bool1);
-            this._plcConnection.WriteValue(bool2);
-            this._plcConnection.WriteValue(db1IntVariable);
-            this._plcConnection.WriteValue(db1RealVariable);
-            this._plcConnection.WriteValue(db1DintVariable);
-            this._plcConnection.WriteValue(db1DWordVariable);
-            this._plcConnection.WriteValue(db1WordVariable);
-
-            this._plcConnection.ReadValue(bool1);
-            this._plcConnection.ReadValue(bool2);
-            this._plcConnection.ReadValue(db1IntVariable);
-            this._plcConnection.ReadValue(db1RealVariable);
-            this._plcConnection.ReadValue(db1DintVariable);
-            this._plcConnection.ReadValue(db1DWordVariable);
-            this._plcConnection.ReadValue(db1WordVariable);
-            var test = 0;
-
+            this._s7Plc = new S7Client();
+            var result = _s7Plc.ConnectTo(ipAdress, 0, 1);
+            string message = _s7Plc.ErrorText(result);
+            this._s7Plc.DBRead(1, 0, 200, _inBuffer);
+            var value = S7.GetIntAt(_inBuffer,15);
         }
 
         public void DisconnectPLC()

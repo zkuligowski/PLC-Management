@@ -1,0 +1,13 @@
+C:\Repos\PLC-Management\PlcApp\Sharp7\bin\Debug\net6.0\libnodave_jfkmod64.dll
+C:\Repos\PLC-Management\PlcApp\Sharp7\bin\Debug\net6.0\Sharp7.deps.json
+C:\Repos\PLC-Management\PlcApp\Sharp7\bin\Debug\net6.0\Sharp7.dll
+C:\Repos\PLC-Management\PlcApp\Sharp7\bin\Debug\net6.0\Sharp7.pdb
+C:\Repos\PLC-Management\PlcApp\Sharp7\obj\Debug\net6.0\Sharp7.csproj.AssemblyReference.cache
+C:\Repos\PLC-Management\PlcApp\Sharp7\obj\Debug\net6.0\Sharp7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\PLC-Management\PlcApp\Sharp7\obj\Debug\net6.0\Sharp7.AssemblyInfoInputs.cache
+C:\Repos\PLC-Management\PlcApp\Sharp7\obj\Debug\net6.0\Sharp7.AssemblyInfo.cs
+C:\Repos\PLC-Management\PlcApp\Sharp7\obj\Debug\net6.0\Sharp7.csproj.CoreCompileInputs.cache
+C:\Repos\PLC-Management\PlcApp\Sharp7\obj\Debug\net6.0\Sharp7.dll
+C:\Repos\PLC-Management\PlcApp\Sharp7\obj\Debug\net6.0\refint\Sharp7.dll
+C:\Repos\PLC-Management\PlcApp\Sharp7\obj\Debug\net6.0\Sharp7.pdb
+C:\Repos\PLC-Management\PlcApp\Sharp7\obj\Debug\net6.0\ref\Sharp7.dll

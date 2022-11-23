@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\..\..\Users\Zbyszek\.nuget\packages\dotnetprojects.dotnetsiemensplctoolboxlibrary\4.0.421\contentFiles\any\netstandard2.1\libnodave_jfkmod64.dll" TargetPath="libnodave_jfkmod64.dll" Link="libnodave_jfkmod64.dll">
+      <Private>True</Private>
+      <NuGetPackageVersion>4.0.421</NuGetPackageVersion>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>DotNetProjects.DotNetSiemensPLCToolBoxLibrary</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+  </ItemGroup>
+
+</Project>

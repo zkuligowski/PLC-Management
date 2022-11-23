@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "apJ8qSEcBs1W56R+xkec7D7ryS1Yh/QFcB4YdT4YgVPkRxTg9tJtQE122NPXq3pGdhNrV/UHQlf78e862u9jUA==",
+  "dgSpecHash": "3lbkWbuAcpZ6bMbccpGNXb6rkMtRZx/kKur/ZuiuESjr2JU1at7V+0KLd0TvZPW5LA7mE7IuWsVH3lVZ/blrgg==",
   "success": true,
   "projectFilePath": "C:\\Repos\\PLC-Management\\PlcApp\\PlcApp\\PlcApp.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\Zbyszek\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Zbyszek\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Zbyszek\\.nuget\\packages\\s7netplus\\0.14.0\\s7netplus.0.14.0.nupkg.sha512",
+    "C:\\Users\\Zbyszek\\.nuget\\packages\\sharp7\\1.1.82\\sharp7.1.1.82.nupkg.sha512",
     "C:\\Users\\Zbyszek\\.nuget\\packages\\sharpziplib\\1.4.0\\sharpziplib.1.4.0.nupkg.sha512",
     "C:\\Users\\Zbyszek\\.nuget\\packages\\sonaranalyzer.csharp\\8.45.0.54064\\sonaranalyzer.csharp.8.45.0.54064.nupkg.sha512",
     "C:\\Users\\Zbyszek\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512",

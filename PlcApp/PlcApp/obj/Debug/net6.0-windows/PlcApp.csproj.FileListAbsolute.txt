@@ -43,3 +43,4 @@ C:\Repos\PLC-Management\PlcApp\PlcApp\bin\Debug\net6.0-windows\ICSharpCode.Sharp
 C:\Repos\PLC-Management\PlcApp\PlcApp\bin\Debug\net6.0-windows\en\DotNetSiemensPLCToolBoxLibrary.resources.dll
 C:\Repos\PLC-Management\PlcApp\PlcApp\bin\Debug\net6.0-windows\es\DotNetSiemensPLCToolBoxLibrary.resources.dll
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\PlcApp_Content.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\bin\Debug\net6.0-windows\Sharp7.dll

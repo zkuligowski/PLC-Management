@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="libs\**" />
+    <EmbeddedResource Remove="libs\**" />
+    <None Remove="libs\**" />
+    <Page Remove="libs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Properties\stylecop.json" />
   </ItemGroup>
 
@@ -26,6 +33,7 @@
     <PackageReference Include="Dapper" Version="2.0.123" />
     <PackageReference Include="DotNetProjects.DotNetSiemensPLCToolBoxLibrary" Version="4.0.421" />
     <PackageReference Include="S7netplus" Version="0.14.0" />
+    <PackageReference Include="Sharp7" Version="1.1.82" />
     <PackageReference Include="SonarAnalyzer.CSharp" Version="8.45.0.54064">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
