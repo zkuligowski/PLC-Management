@@ -2,11 +2,17 @@
 
 namespace PlcApp
 {
+    using System;
     using System.Windows;
+    using PlcApp.Classes;
+    using System.Windows.Threading;
     using PlcApp.Views;
+    using System.ComponentModel;
 
     public partial class MainWindow : Window
     {
+        public bool auth { get; set; } = false;
+
         public MainWindow()
         {
             this.InitializeComponent();
