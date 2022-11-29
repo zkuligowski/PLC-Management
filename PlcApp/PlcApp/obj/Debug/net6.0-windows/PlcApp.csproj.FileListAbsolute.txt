@@ -36,3 +36,8 @@ C:\Repos\PLC-Management\PlcApp\PlcApp\bin\Debug\net6.0-windows\runtimes\unix\lib
 C:\Repos\PLC-Management\PlcApp\PlcApp\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\Views\SCADA.g.cs
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\Views\SCADA.baml
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\LoginView.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\LoginView.baml
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\CustomControls\BindablePasswordBox.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\CustomControls\BindablePasswordBox.baml

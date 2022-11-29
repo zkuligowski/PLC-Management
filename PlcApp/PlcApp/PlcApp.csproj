@@ -8,6 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="View\LoginView - Copy.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\back-image.jpg" />
+    <None Remove="Images\back-image.png" />
+    <None Remove="Images\key-icon.png" />
+    <None Remove="Images\logo-image.png" />
+    <None Remove="Images\logo.png" />
+    <None Remove="Images\user-icon.png" />
     <None Remove="Properties\stylecop.json" />
   </ItemGroup>
 
@@ -56,6 +66,18 @@
     <Page Update="Views\MainWindow.xaml">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\back-image.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\back-image.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\key-icon.png" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\user-icon.png" />
   </ItemGroup>
 
 </Project>
