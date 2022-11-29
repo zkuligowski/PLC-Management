@@ -19,6 +19,9 @@
     <Page Update="CustomControls\BindablePasswordBox.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <ApplicationDefinition Update="Views\App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
     <Page Update="Views\LoginWindow.xaml">
       <SubType>Designer</SubType>
     </Page>

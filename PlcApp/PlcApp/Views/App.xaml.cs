@@ -18,8 +18,17 @@ namespace PlcApp
     {
         protected void ApplicationStart(object sender, StartupEventArgs e)
         {
-            var LoginView = new LoginView();
-            LoginView.Show();
+            var loginView = new LoginView();
+            loginView.Show();
+            loginView.IsVisibleChanged += (s, ev) =>
+            {
+                if (loginView.IsVisible == false && loginView.IsLoaded)
+                {
+                    var mainView = new MainView();
+                    mainView.Show();
+                    loginView.Close();
+                }
+            };
         }
     }
 }

@@ -27,9 +27,7 @@
 
   <ItemGroup>
     <AdditionalFiles Include="Properties\stylecop.json" />
-    <ApplicationDefinition Include="Views\App.xaml">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </ApplicationDefinition>
+    <ApplicationDefinition Include="Views\App.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -64,6 +62,9 @@
 
   <ItemGroup>
     <Page Update="Views\MainWindow.xaml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Page Update="View\LoginView.xaml">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
   </ItemGroup>

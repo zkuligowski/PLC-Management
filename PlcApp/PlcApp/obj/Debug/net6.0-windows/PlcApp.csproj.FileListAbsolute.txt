@@ -41,3 +41,5 @@ C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\LoginView.ba
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\CustomControls\BindablePasswordBox.g.cs
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\CustomControls\BindablePasswordBox.baml
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\MainView.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\MainView.baml

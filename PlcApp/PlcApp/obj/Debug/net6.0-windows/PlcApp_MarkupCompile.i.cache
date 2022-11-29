@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Repos\PLC-Management\PlcApp\PlcApp\Views\App.xaml
-61047614255
+71395912048
 
-27777791835
+302124305970
 198-1998974208
-CustomControls\BindablePasswordBox.xaml;Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\RegistrationWindow.xaml;Views\SCADA.xaml;View\LoginView.xaml;
+CustomControls\BindablePasswordBox.xaml;Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\RegistrationWindow.xaml;Views\SCADA.xaml;View\LoginView.xaml;View\MainView.xaml;
 
 False
 

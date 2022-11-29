@@ -27,7 +27,7 @@ namespace PlcApp.Repositories
             {
                 var output = connection.Query<Person>(
                     "dbo.GetByUsernameAndPassword @UserName, @Email, @Password",
-                    new { Username = credential.UserName, Email = "testemail", Password = credential.Password }).ToList();
+                    new { Username = credential.UserName, Email = credential.UserName, Password = credential.Password }).ToList();
 
                 return output.Count == 1;
             }
@@ -50,7 +50,30 @@ namespace PlcApp.Repositories
 
         public UserModel GetByUsername(string username)
         {
-            throw new NotImplementedException();
+            UserModel user = null;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("UsersDB")))
+            {
+                var output = connection.Query<Person>(
+                    "dbo.GetByUsername @UserName",
+                    new { Username = username });
+                
+                user = new UserModel()
+                {
+                    ID = 0,
+                    FirstName = output.First().FirstName,
+                    Surname = output.First().Surname,
+                    Email = output.First().Email,
+                    BirthDate = output.First().BirthDate,
+                    MobileNumber = output.First().MobileNumber,
+                    UserName = output.First().FirstName,
+                    Password = string.Empty,
+                    RightsLevel = output.First().RightsLevel,
+                    UpdatedOn = string.Empty,
+                };
+            }
+
+            return user;
         }
 
         public void Remove(UserModel user)

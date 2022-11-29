@@ -6,6 +6,7 @@ namespace PlcApp.Views
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.ComponentModel;
+    using System.Linq;
     using System.Windows;
     using PlcApp.Classes;
 
@@ -31,6 +32,7 @@ namespace PlcApp.Views
             try
             {
                 users = db.GetUserFromDB(this.usernameText.Text, this.passwordText.Password.ToString());
+                
             }
             catch (Exception ex)
             {
