@@ -43,3 +43,4 @@ C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\GeneratedInternal
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\CustomControls\BindablePasswordBox.baml
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\MainView.g.cs
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\MainView.baml
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\Styles\UIColors.baml
