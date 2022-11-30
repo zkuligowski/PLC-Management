@@ -1,55 +1,127 @@
-﻿
+﻿// Copyright Zbigniew Kuligowski. All Rights Reserved.
 
 namespace PlcApp.ViewModels
 {
-
+    using System.Threading;
+    using System.Windows.Input;
+    using FontAwesome.Sharp;
     using PlcApp.Models;
     using PlcApp.Repositories;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading;
-    using System.Threading.Tasks;
 
     public class MainViewModel: ViewModelBase
     {
         //Fields
-        private UserAccountModel _currentUserAccount;
+        private UserAccountModel currentUserAccount;
+        private ViewModelBase currentChildView;
+        private string caption;
+        private IconChar icon;
+
         private IUserRepository userRepository;
 
+        // Properties
         public UserAccountModel CurrentUserAccount
         {
             get
             {
-                return _currentUserAccount;
+                return currentUserAccount;
             }
 
             set
             {
-                _currentUserAccount = value;
+                currentUserAccount = value;
                 OnPropertyChanged(nameof(CurrentUserAccount));
             }
         }
+
+        public ViewModelBase CurrentChildView
+        {
+            get
+             {
+                return currentChildView;
+
+             }
+
+            set
+            {
+                currentChildView = value;
+                OnPropertyChanged(nameof(CurrentChildView));
+            }
+        }
+
+        public string Caption
+        {
+            get
+            {
+                return caption;
+
+            }
+
+            set
+            {
+                caption = value;
+                OnPropertyChanged(nameof(Caption));
+            }
+        }
+
+        public IconChar Icon
+        {
+            get
+            {
+                return icon;
+
+            }
+
+            set
+            {
+                icon = value;
+                OnPropertyChanged(nameof(Icon));
+            }
+        }
+
+        // --> Commands
+        public ICommand ShowHomeViewCommand { get; }
+
+        public ICommand ShowConnectionViewCommand { get; }
 
         public MainViewModel()
         {
             userRepository = new UserRepository();
             CurrentUserAccount = new UserAccountModel();
+
+            // Initialize commands
+            ShowHomeViewCommand = new ViewModelCommand(ExecuteShowHomeViewCommand);
+            ShowConnectionViewCommand = new ViewModelCommand(ExecuteShowConnectionViewCommand);
+
+            // Default View
+            ExecuteShowHomeViewCommand(null);
+
             LoadCurrentUserData();
+        }
+
+        private void ExecuteShowConnectionViewCommand(object obj)
+        {
+            CurrentChildView = new ConnectionViewModel();
+            Caption = "Connection";
+            Icon = IconChar.Signal;
+        }
+
+        private void ExecuteShowHomeViewCommand(object obj)
+        {
+            CurrentChildView = new HomeViewModel();
+            Caption = "Home";
+            Icon = IconChar.Home;
         }
 
         private void LoadCurrentUserData()
         {
             var user = userRepository.GetByUsername(Thread.CurrentPrincipal.Identity.Name);
 
-            if ( user != null)
+            if (user != null)
             {
                 CurrentUserAccount.Username = user.UserName;
-                CurrentUserAccount.DisplayName = $"Welcome {user.UserName} {user.Surname} ;)";
+                CurrentUserAccount.DisplayName = $"Logged as: {user.Email}";
                 CurrentUserAccount.ProfilePicture = null;
             }
-
             else
             {
                 CurrentUserAccount.DisplayName = "Invalid user, not logged in";

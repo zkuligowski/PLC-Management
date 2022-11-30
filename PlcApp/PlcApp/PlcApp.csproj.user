@@ -14,6 +14,12 @@
     <Compile Update="Views\SCADA.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\ConnectionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\HomeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="CustomControls\BindablePasswordBox.xaml">
@@ -22,6 +28,9 @@
     <ApplicationDefinition Update="Views\App.xaml">
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Update="Styles\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\LoginWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -32,6 +41,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\SCADA.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ConnectionView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\HomeView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\LoginView.xaml">

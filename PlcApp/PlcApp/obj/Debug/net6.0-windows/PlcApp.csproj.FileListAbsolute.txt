@@ -44,3 +44,10 @@ C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\CustomControls\Bi
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\MainView.g.cs
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\MainView.baml
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\Styles\UIColors.baml
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\Views\App.baml
+C:\Repos\PLC-Management\PlcApp\PlcApp\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\Styles\ButtonStyles.baml
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\ConnectionView.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\HomeView.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\ConnectionView.baml
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\HomeView.baml

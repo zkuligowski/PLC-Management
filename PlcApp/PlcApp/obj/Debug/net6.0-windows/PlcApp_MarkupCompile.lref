@@ -1,5 +1,5 @@
-﻿C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
-
+﻿
+FC:\Repos\PLC-Management\PlcApp\PlcApp\Views\App.xaml;;
 FC:\Repos\PLC-Management\PlcApp\PlcApp\CustomControls\BindablePasswordBox.xaml;;
 FC:\Repos\PLC-Management\PlcApp\PlcApp\Views\LoginWindow.xaml;;
 FC:\Repos\PLC-Management\PlcApp\PlcApp\Views\MainWindow.xaml;;
@@ -7,4 +7,6 @@ FC:\Repos\PLC-Management\PlcApp\PlcApp\Views\RegistrationWindow.xaml;;
 FC:\Repos\PLC-Management\PlcApp\PlcApp\Views\SCADA.xaml;;
 FC:\Repos\PLC-Management\PlcApp\PlcApp\View\LoginView.xaml;;
 FC:\Repos\PLC-Management\PlcApp\PlcApp\View\MainView.xaml;;
+FC:\Repos\PLC-Management\PlcApp\PlcApp\View\ConnectionView.xaml;;
+FC:\Repos\PLC-Management\PlcApp\PlcApp\View\HomeView.xaml;;
 
