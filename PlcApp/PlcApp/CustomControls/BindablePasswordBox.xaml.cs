@@ -28,19 +28,19 @@ namespace PlcApp.CustomControls
 
         public SecureString Password
         {
-            get { return (SecureString)GetValue(PasswordProperty); }
-            set { SetValue(PasswordProperty, value); }
+            get { return (SecureString)this.GetValue(PasswordProperty); }
+            set { this.SetValue(PasswordProperty, value); }
         }
 
         public BindablePasswordBox()
         {
-            InitializeComponent();
-            txtPassword.PasswordChanged += OnPasswordChanged;
+            this.InitializeComponent();
+            this.txtPassword.PasswordChanged += this.OnPasswordChanged;
         }
 
         private void OnPasswordChanged(object sender, RoutedEventArgs e)
         {
-            Password = txtPassword.SecurePassword;
+            this.Password = this.txtPassword.SecurePassword;
         }
     }
 }

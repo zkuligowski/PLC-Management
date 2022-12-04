@@ -2,26 +2,22 @@
 
 namespace PlcApp.ViewModels
 {
-    using PlcApp.Models;
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Security;
-    using System.Text;
-    using System.Threading.Tasks;
-    using System.Windows.Input;
-    using PlcApp.Repositories;
     using System.Net;
-    using System.Threading;
+    using System.Security;
     using System.Security.Principal;
+    using System.Threading;
+    using System.Windows.Input;
+    using PlcApp.Models;
+    using PlcApp.Repositories;
 
     public class LoginViewModel : ViewModelBase
     {
         // Fields
-        private string _userName;
-        private SecureString _password;
-        private string _errorMessage;
-        private bool _isViewVisible = true;
+        private string userName;
+        private SecureString password;
+        private string errorMessage;
+        private bool isViewVisible = true;
 
         private IUserRepository userRepository;
 
@@ -30,13 +26,13 @@ namespace PlcApp.ViewModels
         {
             get
             {
-                return _userName;
+                return this.userName;
             }
 
             set
             {
-                _userName = value;
-                OnPropertyChanged(nameof(UserName));
+                this.userName = value;
+                this.OnPropertyChanged(nameof(this.UserName));
             }
         }
 
@@ -44,13 +40,13 @@ namespace PlcApp.ViewModels
         {
             get
             {
-                return _password;
+                return this.password;
             }
 
             set
             {
-                _password = value;
-                OnPropertyChanged(nameof(Password));
+                this.password = value;
+                this.OnPropertyChanged(nameof(this.Password));
             }
         }
 
@@ -58,13 +54,13 @@ namespace PlcApp.ViewModels
         {
             get
             {
-                return _errorMessage;
+                return this.errorMessage;
             }
 
             set
             {
-                _errorMessage = value;
-                OnPropertyChanged(nameof(ErrorMessage));
+                this.errorMessage = value;
+                this.OnPropertyChanged(nameof(this.ErrorMessage));
             }
         }
 
@@ -72,13 +68,13 @@ namespace PlcApp.ViewModels
         {
             get
             {
-                return _isViewVisible;
+                return this.isViewVisible;
             }
 
             set
             {
-                _isViewVisible = value;
-                OnPropertyChanged(nameof(IsViewVisible));
+                this.isViewVisible = value;
+                this.OnPropertyChanged(nameof(this.IsViewVisible));
             }
         }
 
@@ -96,35 +92,41 @@ namespace PlcApp.ViewModels
         // Constructor
         public LoginViewModel()
         {
-            userRepository = new UserRepository();
-            LoginCommand = new ViewModelCommand(ExecuteloginCommand, CanExecuteLoginCommand);
-            RecoverPasswordCommand = new ViewModelCommand(p => ExecuteRecoverPassCommand(string.Empty, string.Empty));
+            this.userRepository = new UserRepository();
+            this.LoginCommand = new ViewModelCommand(this.ExecuteloginCommand, this.CanExecuteLoginCommand);
+
+            // this.RecoverPasswordCommand = new ViewModelCommand(p => this.ExecuteRecoverPassCommand(string.Empty, string.Empty));
         }
 
         private bool CanExecuteLoginCommand(object obj)
         {
             bool validData;
-            if (string.IsNullOrWhiteSpace(UserName) || UserName.Length < 3 ||
-                Password == null || Password.Length < 3)
+            if (string.IsNullOrWhiteSpace(this.UserName) || this.UserName.Length < 3 ||
+                this.Password == null || this.Password.Length < 3)
+            {
                 validData = false;
+            }
             else
+            {
                 validData = true;
+            }
+
             return validData;
         }
 
         private void ExecuteloginCommand(object obj)
         {
-            var isValidUser = userRepository.AuthenticateUser(new NetworkCredential(UserName, Password));
+            var isValidUser = this.userRepository.AuthenticateUser(new NetworkCredential(this.UserName, this.Password));
             if (isValidUser)
             {
                 // TODO -> Add USER Roles
                 Thread.CurrentPrincipal = new GenericPrincipal(
-                    new GenericIdentity(UserName), null);
-                IsViewVisible = false;
+                    new GenericIdentity(this.UserName), null);
+                this.IsViewVisible = false;
             }
             else
             {
-                ErrorMessage = "* Invalid username or password";
+                this.ErrorMessage = "* Invalid username or password";
             }
         }
 

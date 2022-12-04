@@ -51,3 +51,7 @@ C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\ConnectionVi
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\HomeView.g.cs
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\ConnectionView.baml
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\HomeView.baml
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\ReadDataView.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\WriteDataView.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\ReadDataView.baml
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\WriteDataView.baml

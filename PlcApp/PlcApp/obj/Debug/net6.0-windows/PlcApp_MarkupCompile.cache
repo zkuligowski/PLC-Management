@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Repos\PLC-Management\PlcApp\PlcApp\Views\App.xaml
-11-1064665547
+13121590691
 
-32-802332204
+401021085865
 207942044821
-CustomControls\BindablePasswordBox.xaml;Styles\ButtonStyles.xaml;Styles\UIColors.xaml;Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\RegistrationWindow.xaml;Views\SCADA.xaml;View\ConnectionView.xaml;View\HomeView.xaml;View\LoginView.xaml;View\MainView.xaml;
+CustomControls\BindablePasswordBox.xaml;Styles\ButtonStyles.xaml;Styles\UIColors.xaml;Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\RegistrationWindow.xaml;Views\SCADA.xaml;View\ConnectionView.xaml;View\HomeView.xaml;View\LoginView.xaml;View\MainView.xaml;View\ReadDataView.xaml;View\WriteDataView.xaml;
 
 False
 

@@ -19,14 +19,14 @@ namespace PlcApp.ViewModels
         // Constructors
         public ViewModelCommand(Action<object> execute_Action)
         {
-            _execute_Action = execute_Action;
-            _canExecuteAction = null;
+            this._execute_Action = execute_Action;
+            this._canExecuteAction = null;
         }
 
         public ViewModelCommand(Action<object> execute_Action, Predicate<object> canExecuteAction)
         {
-            _execute_Action = execute_Action;
-            _canExecuteAction = canExecuteAction;
+            this._execute_Action = execute_Action;
+            this._canExecuteAction = canExecuteAction;
         }
 
         // Events
@@ -39,7 +39,7 @@ namespace PlcApp.ViewModels
         // Methods
         public bool CanExecute(object parameter)
         {
-            return _canExecuteAction == null ? true : _canExecuteAction(parameter);
+            return this._canExecuteAction == null ? true : this._canExecuteAction(parameter);
         }
 
         public void Execute(object parameter)

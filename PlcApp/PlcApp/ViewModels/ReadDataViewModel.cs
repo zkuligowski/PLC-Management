@@ -2,7 +2,7 @@
 
 namespace PlcApp.ViewModels
 {
-    public class HomeViewModel : ViewModelBase
+    public class ReadDataViewModel : ViewModelBase
     {
     }
 }

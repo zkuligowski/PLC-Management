@@ -8,14 +8,9 @@ namespace PlcApp.Repositories
     public abstract class RepositoryBase
     {
         private readonly string connectionString;
-        public RepositoryBase()
-        {
-            this.connectionString = Helper.CnnVal("UsersDB");
-        }
 
-        protected SqlConnection GetConnection()
-        {
-            return new SqlConnection(this.connectionString);
-        }
+        protected RepositoryBase() => this.connectionString = Helper.CnnVal("UsersDB");
+
+        protected SqlConnection GetConnection() => new (this.connectionString);
     }
 }

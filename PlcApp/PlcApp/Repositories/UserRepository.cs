@@ -2,17 +2,14 @@
 
 namespace PlcApp.Repositories
 {
-    using Dapper;
-    using PlcApp.Classes;
-    using PlcApp.Models;
     using System;
     using System.Collections.Generic;
     using System.Data;
-    using System.Data.SqlClient;
     using System.Linq;
     using System.Net;
-    using System.Text;
-    using System.Threading.Tasks;
+    using Dapper;
+    using PlcApp.Classes;
+    using PlcApp.Models;
 
     public class UserRepository : RepositoryBase, IUserRepository
     {
@@ -23,14 +20,12 @@ namespace PlcApp.Repositories
 
         public bool AuthenticateUser(NetworkCredential credential)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("UsersDB")))
-            {
-                var output = connection.Query<Person>(
-                    "dbo.GetByUsernameAndPassword @UserName, @Email, @Password",
-                    new { Username = credential.UserName, Email = credential.UserName, Password = credential.Password }).ToList();
+            using IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("UsersDB"));
+            var output = connection.Query<Person>(
+                "dbo.GetByUsernameAndPassword @UserName, @Email, @Password",
+                new { Username = credential.UserName, Email = credential.UserName, Password = credential.Password }).ToList();
 
-                return output.Count == 1;
-            }
+            return output.Count == 1;
         }
 
         public void Edit(UserModel user)
@@ -50,14 +45,14 @@ namespace PlcApp.Repositories
 
         public UserModel GetByUsername(string username)
         {
-            UserModel user = null;
+            UserModel? user = null;
 
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("UsersDB")))
             {
                 var output = connection.Query<Person>(
                     "dbo.GetByUsername @UserName",
                     new { Username = username });
-                
+
                 user = new UserModel()
                 {
                     ID = 0,

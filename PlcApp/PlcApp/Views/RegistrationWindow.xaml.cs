@@ -13,7 +13,7 @@ namespace PlcApp.Views
     {
         public RegistrationWindow()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)

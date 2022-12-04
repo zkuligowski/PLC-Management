@@ -2,13 +2,14 @@
 
 namespace PlcApp.ViewModels
 {
+    using System;
     using System.Threading;
     using System.Windows.Input;
     using FontAwesome.Sharp;
     using PlcApp.Models;
     using PlcApp.Repositories;
 
-    public class MainViewModel: ViewModelBase
+    public class MainViewModel : ViewModelBase
     {
         //Fields
         private UserAccountModel currentUserAccount;
@@ -23,13 +24,13 @@ namespace PlcApp.ViewModels
         {
             get
             {
-                return currentUserAccount;
+                return this.currentUserAccount;
             }
 
             set
             {
-                currentUserAccount = value;
-                OnPropertyChanged(nameof(CurrentUserAccount));
+                this.currentUserAccount = value;
+                this.OnPropertyChanged(nameof(this.CurrentUserAccount));
             }
         }
 
@@ -37,14 +38,13 @@ namespace PlcApp.ViewModels
         {
             get
              {
-                return currentChildView;
-
+                return this.currentChildView;
              }
 
             set
             {
-                currentChildView = value;
-                OnPropertyChanged(nameof(CurrentChildView));
+                this.currentChildView = value;
+                this.OnPropertyChanged(nameof(this.CurrentChildView));
             }
         }
 
@@ -52,14 +52,13 @@ namespace PlcApp.ViewModels
         {
             get
             {
-                return caption;
-
+                return this.caption;
             }
 
             set
             {
-                caption = value;
-                OnPropertyChanged(nameof(Caption));
+                this.caption = value;
+                this.OnPropertyChanged(nameof(this.Caption));
             }
         }
 
@@ -67,14 +66,14 @@ namespace PlcApp.ViewModels
         {
             get
             {
-                return icon;
+                return this.icon;
 
             }
 
             set
             {
-                icon = value;
-                OnPropertyChanged(nameof(Icon));
+                this.icon = value;
+                this.OnPropertyChanged(nameof(this.Icon));
             }
         }
 
@@ -83,49 +82,69 @@ namespace PlcApp.ViewModels
 
         public ICommand ShowConnectionViewCommand { get; }
 
+        public ICommand ShowReadDataViewCommand { get; }
+
+        public ICommand ShowWriteDataViewCommand { get; }
+
         public MainViewModel()
         {
-            userRepository = new UserRepository();
-            CurrentUserAccount = new UserAccountModel();
+            this.userRepository = new UserRepository();
+            this.CurrentUserAccount = new UserAccountModel();
 
             // Initialize commands
-            ShowHomeViewCommand = new ViewModelCommand(ExecuteShowHomeViewCommand);
-            ShowConnectionViewCommand = new ViewModelCommand(ExecuteShowConnectionViewCommand);
+            this.ShowHomeViewCommand = new ViewModelCommand(this.ExecuteShowHomeViewCommand);
+            this.ShowConnectionViewCommand = new ViewModelCommand(this.ExecuteShowConnectionViewCommand);
+            this.ShowReadDataViewCommand = new ViewModelCommand(this.ExecuteShowReadDataViewCommand);
+            this.ShowWriteDataViewCommand = new ViewModelCommand(this.ExecuteShowWriteDataViewCommand);
 
             // Default View
-            ExecuteShowHomeViewCommand(null);
+            this.ExecuteShowHomeViewCommand(null);
 
-            LoadCurrentUserData();
+            this.LoadCurrentUserData();
+        }
+
+        private void ExecuteShowWriteDataViewCommand(object obj)
+        {
+            this.CurrentChildView = new WriteDataViewModel();
+            this.Caption = "Write Data";
+            this.Icon = IconChar.Upload;
+        }
+
+        private void ExecuteShowReadDataViewCommand(object obj)
+        {
+            this.CurrentChildView = new ReadDataViewModel();
+            this.Caption = "Read Data";
+            this.Icon = IconChar.Download;
         }
 
         private void ExecuteShowConnectionViewCommand(object obj)
         {
-            CurrentChildView = new ConnectionViewModel();
-            Caption = "Connection";
-            Icon = IconChar.Signal;
+            this.CurrentChildView = new ConnectionViewModel();
+            this.Caption = "Connection";
+            this.Icon = IconChar.Signal;
         }
 
         private void ExecuteShowHomeViewCommand(object obj)
         {
-            CurrentChildView = new HomeViewModel();
-            Caption = "Home";
-            Icon = IconChar.Home;
+            this.CurrentChildView = new HomeViewModel();
+            this.Caption = "Home";
+            this.Icon = IconChar.Home;
         }
 
         private void LoadCurrentUserData()
         {
-            var user = userRepository.GetByUsername(Thread.CurrentPrincipal.Identity.Name);
+            //var user = this.userRepository.GetByUsername(Thread.CurrentPrincipal.Identity.Name);
 
-            if (user != null)
-            {
-                CurrentUserAccount.Username = user.UserName;
-                CurrentUserAccount.DisplayName = $"Logged as: {user.Email}";
-                CurrentUserAccount.ProfilePicture = null;
-            }
-            else
-            {
-                CurrentUserAccount.DisplayName = "Invalid user, not logged in";
-            }
+            //if (user != null)
+            //{
+            //    this.CurrentUserAccount.Username = user.UserName;
+            //    this.CurrentUserAccount.DisplayName = $"Logged as: {user.Email}";
+            //    this.CurrentUserAccount.ProfilePicture = null;
+            //}
+            //else
+            //{
+            //    this.CurrentUserAccount.DisplayName = "Invalid user, not logged in";
+            //}
         }
     }
 }

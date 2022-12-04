@@ -18,13 +18,21 @@
     </Window.DataContext>
 
     <Window.Resources>
-        
+
         <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
             <local:HomeView/>
         </DataTemplate>
 
         <DataTemplate DataType="{x:Type viewModel:ConnectionViewModel}">
             <local:ConnectionView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:ReadDataViewModel}">
+            <local:ReadDataView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:WriteDataViewModel}">
+            <local:WriteDataView/>
         </DataTemplate>
 
     </Window.Resources>
@@ -45,7 +53,7 @@
                 <ColumnDefinition Width="250"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            
+
             <!--Navigation Menu-->
             <Border CornerRadius="10,0,0,10"
                     Grid.Column="0">
@@ -56,7 +64,7 @@
                         <GradientStop Color="{StaticResource secondaryBackColor2}" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
-                
+
                 <!--Logo-->
                 <StackPanel>
                     <StackPanel Orientation="Horizontal"
@@ -71,7 +79,7 @@
                                    Margin="10,0,0,0"/>
 
                     </StackPanel>
-                    
+
                     <!--Menu Buttons-->
                     <RadioButton Style="{StaticResource menuButton}"
                                  Tag="{StaticResource color1}"
@@ -93,7 +101,8 @@
                     </RadioButton>
 
                     <RadioButton Style="{StaticResource menuButton}"
-                                 Tag="{StaticResource color1}">
+                                 Tag="{StaticResource color1}"
+                                 Command="{Binding ShowReadDataViewCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="Download" Style="{StaticResource menuButtonIcon}"/>
                             <TextBlock Text="Read Data" Style="{StaticResource menuButtonText}"/>
@@ -101,7 +110,8 @@
                     </RadioButton>
 
                     <RadioButton Style="{StaticResource menuButton}"
-                                 Tag="{StaticResource color1}">
+                                 Tag="{StaticResource color1}"
+                                 Command="{Binding ShowWriteDataViewCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="Upload" Style="{StaticResource menuButtonIcon}"/>
                             <TextBlock Text="Write Data" Style="{StaticResource menuButtonText}"/>
@@ -117,9 +127,9 @@
                     </RadioButton>
 
                 </StackPanel>
-                
+
             </Border>
-            
+
             <!--Main Section-->
             <Border CornerRadius="0,10,10,0"
                     Grid.Column="1">
@@ -148,50 +158,51 @@
                                 FlowDirection="RightToLeft"
                                 Background="Transparent"
                                 Margin="0,0,5,0"
-                                MouseLeftButtonDown="pnlControlBar_MouseLeftButtonDown"
-                                MouseEnter="pnlControlBar_MouseEnter">
+                                MouseLeftButtonDown="PnlControlBar_MouseLeftButtonDown"
+                                MouseEnter="PnlControlBar_MouseEnter">
 
                         <Button x:Name="btnClose"
                                 Style="{StaticResource controlButton}"
                                 Tag="{StaticResource color4}"
-                                Click="btnClose_Click">
+                                Click="BtnClose_Click">
                             <fa:IconImage Icon="Xmark" Style="{StaticResource controlButtonIcon}"/>
                         </Button>
 
                         <Button x:Name="btnMaximize"
                                 Style="{StaticResource controlButton}"
                                 Tag="{StaticResource color6}"
-                                Click="btnMaximize_Click">
+                                Click="BtnMaximize_Click">
                             <fa:IconImage Icon="WindowMaximize" Style="{StaticResource controlButtonIcon}"/>
                         </Button>
-                        
+
                         <Button x:Name="btnMinimize"
                                 Style="{StaticResource controlButton}"
                                 Tag="{StaticResource color6}"
-                                Click="btnMinimize_Click">
+                                Click="BtnMinimize_Click">
                             <fa:IconImage Icon="WindowMinimize" Width="12" Style="{StaticResource controlButtonIcon}"/>
                         </Button>
 
                     </StackPanel>
-                    
+
                     <!--Header / Caption-->
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition Width="209*"/>
+                            <ColumnDefinition Width="61*"/>
+                            <ColumnDefinition Width="270*"/>
                         </Grid.ColumnDefinitions>
-                        
+
                         <!--Caption-->
                         <StackPanel Grid.Column="0"
                                     Orientation="Horizontal"
-                                    VerticalAlignment="Center">
+                                    VerticalAlignment="Center" Grid.ColumnSpan="2">
 
                             <fa:IconImage Icon="{Binding Icon}"
                                           Height="20"
                                           Width="20"
                                           Foreground="{StaticResource titleColor2}"
                                           Margin="35,0,10,0"/>
-                            
+
                             <TextBlock Text="{Binding Caption}"
                                        Foreground="{StaticResource titleColor2}"
                                        FontSize="16"
@@ -199,9 +210,9 @@
                                        FontWeight="Medium"
                                        VerticalAlignment="Center"/>
                         </StackPanel>
-                        
+
                         <!--User options-->
-                        <StackPanel Grid.Column="1"
+                        <StackPanel Grid.Column="2"
                                     Orientation="Horizontal"
                                     FlowDirection="RightToLeft"
                                     VerticalAlignment="Center"
@@ -219,7 +230,7 @@
                                        VerticalAlignment="Center"/>
 
                         </StackPanel>
-                        
+
                     </Grid>
 
                     <!--Content section / Child views-->
@@ -231,7 +242,7 @@
 
             </Border>
 
-           
+
 
 
         </Grid>
@@ -239,7 +250,7 @@
 
 
     </Border>
-    
-    
+
+
 
 </Window>

@@ -18,7 +18,7 @@ namespace PlcApp.Views
 
         public SCADA()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         private void ConnectPLC_Click(object sender, RoutedEventArgs e)

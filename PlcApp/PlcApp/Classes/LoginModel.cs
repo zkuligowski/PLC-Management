@@ -26,13 +26,13 @@ namespace PlcApp.Classes
         {
             get
             {
-                return authenticated;
+                return this.authenticated;
             }
 
             set
             {
                 this.authenticated = value;
-                this.OnpropertyChanged(Authenticated);
+                this.OnpropertyChanged(this.Authenticated);
             }
         }
     }

@@ -31,6 +31,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.123" />
     <PackageReference Include="FontAwesome.Sharp" Version="6.1.1" />
     <PackageReference Include="S7netplus" Version="0.14.0" />
@@ -71,9 +75,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\back-image.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Images\back-image.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
