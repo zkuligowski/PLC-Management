@@ -12,6 +12,8 @@ namespace PlcApp.Models
     {
         public string? IpAddress { get; set; }
 
+        public bool? IsConnected { get; set; }
+
         public string? PlcType { get; set; }
 
         public int? Rack { get; set; }

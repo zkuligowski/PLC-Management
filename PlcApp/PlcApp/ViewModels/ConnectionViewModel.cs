@@ -2,18 +2,20 @@
 
 namespace PlcApp.ViewModels
 {
-    using PlcApp.Models;
-    using PlcApp.Repositories;
-    using System.Windows.Input;
     using System;
+    using System.Windows.Input;
+    using PlcApp.Models;
+    using PlcApp.Properties;
+    using PlcApp.Repositories;
 
     public class ConnectionViewModel : ViewModelBase
     {
-        //Fields
+        // Fields
         private ConnectionAccountModel currentConnectionAccount;
-        private string ipAddress;
+        private string ipAddress = "192.168.0.50";
         private bool isConnected;
         private string connectionStatus;
+        private Db1Model db1model;
 
         private IConnectionRepository connectionRepository;
 
@@ -93,9 +95,34 @@ namespace PlcApp.ViewModels
             this.LoadCurrentConnectionData();
         }
 
+       
+
+        private void ExecuteWriteDataCommand(object obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void ExecuteDisconnectionCommand(object obj)
+        {
+            this.IsConnected = this.connectionRepository.Disconnect(this.IpAddress);
+            this.CurrentConnectionAccount.IpAddress = this.IpAddress;
+            this.CurrentConnectionAccount.IsConnected = this.IsConnected;
+            Settings.Default.IsConnected = false;
+            this.LoadCurrentConnectionData();
+        }
+
+        private void ExecuteConnectionCommand(object obj)
+        {
+            this.IsConnected = this.connectionRepository.Connect(this.IpAddress);
+            this.CurrentConnectionAccount.IpAddress = this.IpAddress;
+            this.CurrentConnectionAccount.IsConnected = this.IsConnected;
+            Settings.Default.IsConnected = true;
+            this.LoadCurrentConnectionData();
+        }
+
         private void LoadCurrentConnectionData()
         {
-            if (this.IsConnected)
+            if (Settings.Default.IsConnected)
             {
                 this.ConnectionStatus = "Connected to: " + this.IpAddress;
             }
@@ -103,18 +130,6 @@ namespace PlcApp.ViewModels
             {
                 this.ConnectionStatus = "Not Connected!";
             }
-        }
-
-        private void ExecuteDisconnectionCommand(object obj)
-        {
-            this.IsConnected = this.connectionRepository.Disconnect(this.IpAddress);
-            this.LoadCurrentConnectionData();
-        }
-
-        private void ExecuteConnectionCommand(object obj)
-        {
-            this.IsConnected = this.connectionRepository.Connect(this.IpAddress);
-            this.LoadCurrentConnectionData();
         }
     }
 }
