@@ -3,10 +3,12 @@
 namespace PlcApp.ViewModels
 {
     using System;
+    using System.Threading;
     using System.Windows.Input;
     using PlcApp.Models;
     using PlcApp.Properties;
     using PlcApp.Repositories;
+    using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
     public class ConnectionViewModel : ViewModelBase
     {
@@ -16,6 +18,7 @@ namespace PlcApp.ViewModels
         private bool isConnected;
         private string connectionStatus;
         private Db1Model db1model;
+        private UserRepository userRepository;
 
         private IConnectionRepository connectionRepository;
 
@@ -93,9 +96,9 @@ namespace PlcApp.ViewModels
             this.DisconnectionCommand = new ViewModelCommand(this.ExecuteDisconnectionCommand);
 
             this.LoadCurrentConnectionData();
-        }
 
-       
+            this.userRepository = new UserRepository();
+        }
 
         private void ExecuteWriteDataCommand(object obj)
         {
@@ -109,6 +112,7 @@ namespace PlcApp.ViewModels
             this.CurrentConnectionAccount.IsConnected = this.IsConnected;
             Settings.Default.IsConnected = false;
             this.LoadCurrentConnectionData();
+            this.userRepository.ArchiveUserActivity("Disconnect", "IP Address: " + this.IpAddress);
         }
 
         private void ExecuteConnectionCommand(object obj)
@@ -118,6 +122,7 @@ namespace PlcApp.ViewModels
             this.CurrentConnectionAccount.IsConnected = this.IsConnected;
             Settings.Default.IsConnected = true;
             this.LoadCurrentConnectionData();
+            this.userRepository.ArchiveUserActivity("Connect", "IP Address: " + this.IpAddress);
         }
 
         private void LoadCurrentConnectionData()

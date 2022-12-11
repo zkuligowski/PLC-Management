@@ -7,6 +7,8 @@ namespace PlcApp.ViewModels
     using PlcApp.Repositories;
     using S7.Net;
     using System.Globalization;
+    using System.Text.Json;
+    using System.Threading;
     using System.Windows.Input;
 
     public class WriteDataViewModel : ViewModelBase
@@ -14,6 +16,7 @@ namespace PlcApp.ViewModels
         // Fields
         private bool isConnected;
         private Db1Model db1model;
+        private UserRepository userRepository;
 
         private IConnectionRepository connectionRepository;
 
@@ -62,7 +65,14 @@ namespace PlcApp.ViewModels
 
             this.connectionRepository = new ConnectionRepository();
 
-            this.WriteDataCommand = new ViewModelCommand(this.ExecuteWriteDataCommand);
+            this.WriteDataCommand = new ViewModelCommand(this.ExecuteWriteDataCommand, this.CanExecuteWriteDataCommand);
+
+            this.userRepository = new UserRepository();
+        }
+
+        private bool CanExecuteWriteDataCommand(object obj)
+        {
+            return Settings.Default.IsConnected;
         }
 
         private void ExecuteWriteDataCommand(object obj)
@@ -83,6 +93,9 @@ namespace PlcApp.ViewModels
             Settings.Default.DInt = this.db1model.DIntVariable;
             Settings.Default.DWord = this.db1model.DWordVariable;
             Settings.Default.Word = this.db1model.WordVariable;
+
+            string jsonData = JsonSerializer.Serialize(this.db1model);
+            this.userRepository.ArchiveUserActivity("Write Data", jsonData);
         }
     }
 }

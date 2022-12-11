@@ -128,6 +128,8 @@ namespace PlcApp.ViewModels
                 Thread.CurrentPrincipal = new GenericPrincipal(
                     new GenericIdentity(this.UserName), null);
                 this.IsViewVisible = false;
+
+                this.userRepository.ArchiveUserActivity("Login", string.Empty);
             }
             else
             {

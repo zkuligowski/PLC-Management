@@ -157,7 +157,7 @@
                                FontFamily="Montserrat"
                                HorizontalAlignment="Center"/>
                     
-                    <TextBlock Text="With  this  App  you  can  easily  manage  PLC  inputs / outputs  without  TiaPortal"
+                    <TextBlock Text="With  this  App  you  can  easily  manage  PLC  variables in  Data block  without  TiaPortal"
                                Foreground="Gray"
                                FontSize="12"
                                FontWeight="Medium"

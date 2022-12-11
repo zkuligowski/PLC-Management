@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Security;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
@@ -183,6 +184,8 @@ namespace PlcApp.ViewModels
                 this.RightsLevel);
 
             this.userRepository.Add(this.userModel);
+
+            this.userRepository.ArchiveUserActivity("New Account Created", "UserName: " + this.UserName);
         }
     }
 }

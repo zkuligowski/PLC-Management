@@ -176,18 +176,18 @@ namespace PlcApp.ViewModels
 
         private void LoadCurrentUserData()
         {
-            //var user = this.userRepository.GetByUsername(Thread.CurrentPrincipal.Identity.Name);
+            var user = this.userRepository.GetByUsername(Thread.CurrentPrincipal.Identity.Name);
 
-            //if (user != null)
-            //{
-            //    this.CurrentUserAccount.Username = user.UserName;
-            //    this.CurrentUserAccount.DisplayName = $"Logged as: {user.Email}";
-            //    this.CurrentUserAccount.ProfilePicture = null;
-            //}
-            //else
-            //{
-            //    this.CurrentUserAccount.DisplayName = "Invalid user, not logged in";
-            //}
+            if (user != null)
+            {
+                this.CurrentUserAccount.Username = user.UserName;
+                this.CurrentUserAccount.DisplayName = $"Logged as: {user.UserName}";
+                this.CurrentUserAccount.ProfilePicture = null;
+            }
+            else
+            {
+                this.CurrentUserAccount.DisplayName = "Invalid user, not logged in";
+            }
         }
 
         private void LoadPriviliges()

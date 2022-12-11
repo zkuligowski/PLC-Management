@@ -15,6 +15,8 @@ namespace PlcApp.Models
 
         void Remove(UserModel user);
 
+        void ArchiveUserActivity(string userAction, string userData);
+
         UserModel GetById(int id);
 
         UserModel GetByUsername(string username);

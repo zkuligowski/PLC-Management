@@ -11,8 +11,8 @@ false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Repos\PLC-Management\PlcApp\PlcApp\Views\App.xaml
 14-1130788628
-
-45-629095384
+12112662615
+47-1815798941
 207942044821
 CustomControls\BindablePasswordBox.xaml;Styles\ButtonStyles.xaml;Styles\UIColors.xaml;Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\RegistrationWindow.xaml;Views\SCADA.xaml;View\ConnectionView.xaml;View\HomeView.xaml;View\LoginView.xaml;View\MainView.xaml;View\ReadDataView.xaml;View\RegisterView.xaml;View\WriteDataView.xaml;
 
