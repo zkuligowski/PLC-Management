@@ -23,5 +23,21 @@ namespace PlcApp.Models
         public string? RightsLevel { get; set; }
 
         public string? UpdatedOn { get; set; }
+
+        public UserModel(string? firstName, string? surname, string? email, string? birthDate, string? mobileNumber, string? userName, string? password, string? rightsLevel)
+        {
+            this.FirstName = firstName;
+            Surname = surname;
+            Email = email;
+            BirthDate = birthDate;
+            MobileNumber = mobileNumber;
+            UserName = userName;
+            Password = password;
+            RightsLevel = rightsLevel;
+        }
+
+        public UserModel()
+        {
+        }
     }
 }

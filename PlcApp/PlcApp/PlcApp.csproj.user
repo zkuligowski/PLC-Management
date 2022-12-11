@@ -23,6 +23,9 @@
     <Compile Update="View\ReadDataView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\RegisterView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\WriteDataView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -59,6 +62,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\ReadDataView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\RegisterView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\WriteDataView.xaml">

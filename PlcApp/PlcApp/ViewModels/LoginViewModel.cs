@@ -9,6 +9,7 @@ namespace PlcApp.ViewModels
     using System.Threading;
     using System.Windows.Input;
     using PlcApp.Models;
+    using PlcApp.Properties;
     using PlcApp.Repositories;
 
     public class LoginViewModel : ViewModelBase
@@ -18,6 +19,7 @@ namespace PlcApp.ViewModels
         private SecureString password;
         private string errorMessage;
         private bool isViewVisible = true;
+        private UserModel userModel;
 
         private IUserRepository userRepository;
 
@@ -93,6 +95,7 @@ namespace PlcApp.ViewModels
         public LoginViewModel()
         {
             this.userRepository = new UserRepository();
+            this.userModel = new UserModel();
             this.LoginCommand = new ViewModelCommand(this.ExecuteloginCommand, this.CanExecuteLoginCommand);
 
             // this.RecoverPasswordCommand = new ViewModelCommand(p => this.ExecuteRecoverPassCommand(string.Empty, string.Empty));
@@ -119,7 +122,9 @@ namespace PlcApp.ViewModels
             var isValidUser = this.userRepository.AuthenticateUser(new NetworkCredential(this.UserName, this.Password));
             if (isValidUser)
             {
-                // TODO -> Add USER Roles
+                this.userModel = this.userRepository.GetByUsername(this.UserName);
+                Settings.Default.Rights = this.userModel.RightsLevel;
+
                 Thread.CurrentPrincipal = new GenericPrincipal(
                     new GenericIdentity(this.UserName), null);
                 this.IsViewVisible = false;

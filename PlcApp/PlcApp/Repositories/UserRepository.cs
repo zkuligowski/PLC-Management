@@ -7,7 +7,9 @@ namespace PlcApp.Repositories
     using System.Data;
     using System.Linq;
     using System.Net;
+    using System.Security;
     using Dapper;
+    using Microsoft.VisualBasic.ApplicationServices;
     using PlcApp.Classes;
     using PlcApp.Models;
 
@@ -15,7 +17,9 @@ namespace PlcApp.Repositories
     {
         public void Add(UserModel user)
         {
-            throw new NotImplementedException();
+            using IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("UsersDB"));
+
+            connection.Execute("dbo.insertUser @FirstName, @Surname, @Email, @BirthDate, @MobileNumber, @Username, @Password, @RightsLevel", user);
         }
 
         public bool AuthenticateUser(NetworkCredential credential)
@@ -62,7 +66,7 @@ namespace PlcApp.Repositories
                     BirthDate = output.First().BirthDate,
                     MobileNumber = output.First().MobileNumber,
                     UserName = output.First().FirstName,
-                    Password = string.Empty,
+                    Password = null,
                     RightsLevel = output.First().RightsLevel,
                     UpdatedOn = string.Empty,
                 };

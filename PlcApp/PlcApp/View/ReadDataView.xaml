@@ -8,7 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <StackPanel x:Name="pnlWriteData"
+        <StackPanel x:Name="pnlReadData"
                     Orientation="Vertical"
                     Margin="100,0,100,0">
 
@@ -19,7 +19,7 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"/>
 
-            <TextBox x:Name="txtBool"
+            <TextBox x:Name="txtBoolRead"
                              Text="{Binding Db1Model.Bool1, UpdateSourceTrigger=PropertyChanged}"
                              TextAlignment="Center"
                              FontSize="17"
@@ -43,7 +43,7 @@
                        HorizontalAlignment="Center"
                        Margin="0,10,0,0"/>
 
-            <TextBox x:Name="txtInt"
+            <TextBox x:Name="txtIntRead"
                              Text="{Binding Db1Model.IntVariable, UpdateSourceTrigger=PropertyChanged}"
                              TextAlignment="Center"
                              FontSize="17"
@@ -67,7 +67,7 @@
                        HorizontalAlignment="Center"
                        Margin="0,10,0,0"/>
 
-            <TextBox x:Name="txtReal"
+            <TextBox x:Name="txtRealRead"
                              Text="{Binding Db1Model.RealVariable, UpdateSourceTrigger=PropertyChanged}"
                              TextAlignment="Center"
                              FontSize="17"
@@ -91,7 +91,7 @@
                        HorizontalAlignment="Center"
                        Margin="0,10,0,0"/>
 
-            <TextBox x:Name="txtDInt"
+            <TextBox x:Name="txtDIntRead"
                              Text="{Binding Db1Model.DIntVariable, UpdateSourceTrigger=PropertyChanged}"
                              TextAlignment="Center"
                              FontSize="17"
@@ -115,7 +115,7 @@
                        HorizontalAlignment="Center"
                        Margin="0,10,0,0"/>
 
-            <TextBox x:Name="txtDWord"
+            <TextBox x:Name="txtDWordRead"
                              Text="{Binding Db1Model.DWordVariable, UpdateSourceTrigger=PropertyChanged}"
                              TextAlignment="Center"
                              FontSize="17"
@@ -139,7 +139,7 @@
                        HorizontalAlignment="Center"
                        Margin="0,10,0,0"/>
 
-            <TextBox x:Name="txtWord"
+            <TextBox x:Name="txtWordRead"
                              Text="{Binding Db1Model.WordVariable, UpdateSourceTrigger=PropertyChanged}"
                              TextAlignment="Center"
                              FontSize="17"

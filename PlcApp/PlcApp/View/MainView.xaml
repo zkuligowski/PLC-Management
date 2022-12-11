@@ -35,6 +35,10 @@
             <local:WriteDataView/>
         </DataTemplate>
 
+        <DataTemplate DataType="{x:Type viewModel:RegisterViewModel}">
+            <local:RegisterView/>
+        </DataTemplate>
+
     </Window.Resources>
 
     <Border CornerRadius="12"   
@@ -111,7 +115,8 @@
 
                     <RadioButton Style="{StaticResource menuButton}"
                                  Tag="{StaticResource color1}"
-                                 Command="{Binding ShowWriteDataViewCommand}">
+                                 Command="{Binding ShowWriteDataViewCommand}"
+                                 IsEnabled="{Binding WriteDataEnabled}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="Upload" Style="{StaticResource menuButtonIcon}"/>
                             <TextBlock Text="Write Data" Style="{StaticResource menuButtonText}"/>
@@ -119,10 +124,13 @@
                     </RadioButton>
 
                     <RadioButton Style="{StaticResource menuButton}"
-                                 Tag="{StaticResource color1}">
+                                 Tag="{StaticResource color1}"
+                                 Command="{Binding ShowRegisterViewCommand}"
+                                 IsEnabled="{Binding RegisterAccountEnabled}">
                         <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="EmptyButton" Style="{StaticResource menuButtonText}"/>
+                            <fa:IconImage Icon="IdCard" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Register new account" Style="{StaticResource menuButtonText}"
+                                       />
                         </StackPanel>
                     </RadioButton>
 

@@ -2,15 +2,14 @@
 
 namespace PlcApp.ViewModels
 {
+    using System.Windows.Input;
     using PlcApp.Models;
     using PlcApp.Properties;
     using PlcApp.Repositories;
-    using System.Windows.Input;
 
     public class ReadDataViewModel : ViewModelBase
     {
         // Fields
-        private string ipAddresss;
         private bool isConnected;
         private Db1Model db1model;
 

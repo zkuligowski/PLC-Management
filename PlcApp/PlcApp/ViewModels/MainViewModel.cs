@@ -7,6 +7,7 @@ namespace PlcApp.ViewModels
     using System.Windows.Input;
     using FontAwesome.Sharp;
     using PlcApp.Models;
+    using PlcApp.Properties;
     using PlcApp.Repositories;
 
     public class MainViewModel : ViewModelBase
@@ -16,6 +17,8 @@ namespace PlcApp.ViewModels
         private ViewModelBase currentChildView;
         private string caption;
         private IconChar icon;
+        private bool writeDataEnabled;
+        private bool registerAccountEnabled;
 
         private IUserRepository userRepository;
 
@@ -77,6 +80,35 @@ namespace PlcApp.ViewModels
             }
         }
 
+        public bool WriteDataEnabled
+        {
+            get
+            {
+                return this.writeDataEnabled;
+
+            }
+
+            set
+            {
+                this.writeDataEnabled = value;
+                this.OnPropertyChanged(nameof(this.WriteDataEnabled));
+            }
+        }
+
+        public bool RegisterAccountEnabled
+        {
+            get
+            {
+                return this.registerAccountEnabled;
+            }
+
+            set
+            {
+                this.registerAccountEnabled = value;
+                this.OnPropertyChanged(nameof(this.RegisterAccountEnabled));
+            }
+        }
+
         // --> Commands
         public ICommand ShowHomeViewCommand { get; }
 
@@ -85,6 +117,8 @@ namespace PlcApp.ViewModels
         public ICommand ShowReadDataViewCommand { get; }
 
         public ICommand ShowWriteDataViewCommand { get; }
+
+        public ICommand ShowRegisterViewCommand { get; }
 
         public MainViewModel()
         {
@@ -96,11 +130,20 @@ namespace PlcApp.ViewModels
             this.ShowConnectionViewCommand = new ViewModelCommand(this.ExecuteShowConnectionViewCommand);
             this.ShowReadDataViewCommand = new ViewModelCommand(this.ExecuteShowReadDataViewCommand);
             this.ShowWriteDataViewCommand = new ViewModelCommand(this.ExecuteShowWriteDataViewCommand);
+            this.ShowRegisterViewCommand = new ViewModelCommand(this.ExecuteRegisterViewCommand);
 
             // Default View
             this.ExecuteShowHomeViewCommand(null);
 
             this.LoadCurrentUserData();
+            this.LoadPriviliges();
+        }
+
+        private void ExecuteRegisterViewCommand(object obj)
+        {
+            this.CurrentChildView = new RegisterViewModel();
+            this.Caption = "Register new account";
+            this.Icon = IconChar.IdCard;
         }
 
         private void ExecuteShowWriteDataViewCommand(object obj)
@@ -145,6 +188,19 @@ namespace PlcApp.ViewModels
             //{
             //    this.CurrentUserAccount.DisplayName = "Invalid user, not logged in";
             //}
+        }
+
+        private void LoadPriviliges()
+        {
+            if (Settings.Default.Rights.Equals("Admin"))
+            {
+                this.RegisterAccountEnabled = true;
+                this.WriteDataEnabled = true;
+            }
+            else if (Settings.Default.Rights.Equals("Read-Write"))
+            {
+                this.WriteDataEnabled = true;
+            }
         }
     }
 }

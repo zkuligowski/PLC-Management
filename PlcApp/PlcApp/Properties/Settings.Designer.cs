@@ -118,5 +118,17 @@ namespace PlcApp.Properties {
                 this["Word"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Rights {
+            get {
+                return ((string)(this["Rights"]));
+            }
+            set {
+                this["Rights"] = value;
+            }
+        }
     }
 }

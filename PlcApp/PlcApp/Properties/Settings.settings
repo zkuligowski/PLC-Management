@@ -26,5 +26,8 @@
     <Setting Name="Word" Type="System.UInt16" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="Rights" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>
