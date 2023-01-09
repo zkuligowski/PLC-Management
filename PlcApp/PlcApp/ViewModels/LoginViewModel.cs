@@ -119,7 +119,9 @@ namespace PlcApp.ViewModels
 
         private void ExecuteloginCommand(object obj)
         {
-            var isValidUser = this.userRepository.AuthenticateUser(new NetworkCredential(this.UserName, this.Password));
+            var isValidUser = this.userRepository.AuthenticateUser(
+                new NetworkCredential(
+                    this.UserName, this.Password));
             if (isValidUser)
             {
                 this.userModel = this.userRepository.GetByUsername(this.UserName);

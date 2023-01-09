@@ -15,12 +15,7 @@ namespace PlcApp.Repositories
             this.plc = new Plc(CpuType.S71200, ipAddress, 0, 1);
             this.plc.Open();
 
-            if (this.plc.IsConnected)
-            {
-                return true;
-            }
-
-            return false;
+            return this.plc.IsConnected;
         }
 
         public bool Disconnect(string ipAddress)

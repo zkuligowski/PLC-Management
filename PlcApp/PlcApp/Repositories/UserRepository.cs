@@ -19,14 +19,14 @@ namespace PlcApp.Repositories
     {
         public void Add(UserModel user)
         {
-            using IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("UsersDB"));
+            using IDbConnection connection = new System.Data.SqlClient.SqlConnection(HelperConnection.CnnVal("UsersDB"));
 
             connection.Execute("dbo.insertUser @FirstName, @Surname, @Email, @BirthDate, @MobileNumber, @Username, @Password, @RightsLevel", user);
         }
 
         public bool AuthenticateUser(NetworkCredential credential)
         {
-            using IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("UsersDB"));
+            using IDbConnection connection = new System.Data.SqlClient.SqlConnection(HelperConnection.CnnVal("UsersDB"));
             var output = connection.Query<UserModel>(
                 "dbo.GetByUsernameAndPassword @UserName, @Email, @Password",
                 new { Username = credential.UserName, Email = credential.UserName, Password = credential.Password }).ToList();
@@ -53,7 +53,7 @@ namespace PlcApp.Repositories
         {
             UserModel? user = null;
 
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("UsersDB")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(HelperConnection.CnnVal("UsersDB")))
             {
                 var output = connection.Query<Person>(
                     "dbo.GetByUsername @UserName",
@@ -86,7 +86,7 @@ namespace PlcApp.Repositories
         {
             var userName = Thread.CurrentPrincipal.Identity.Name;
 
-            using IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("UsersDB"));
+            using IDbConnection connection = new System.Data.SqlClient.SqlConnection(HelperConnection.CnnVal("UsersDB"));
 
             connection.Query<UserAccountModel>(
                     "dbo.InsertActivityEvent @UserName, @UserAction, @UserData",

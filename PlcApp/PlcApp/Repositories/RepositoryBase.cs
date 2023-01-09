@@ -9,7 +9,7 @@ namespace PlcApp.Repositories
     {
         private readonly string connectionString;
 
-        protected RepositoryBase() => this.connectionString = Helper.CnnVal("UsersDB");
+        protected RepositoryBase() => this.connectionString = HelperConnection.CnnVal("UsersDB");
 
         protected SqlConnection GetConnection() => new (this.connectionString);
     }

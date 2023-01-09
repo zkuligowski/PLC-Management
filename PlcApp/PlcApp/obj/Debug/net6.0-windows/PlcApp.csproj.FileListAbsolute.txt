@@ -57,4 +57,3 @@ C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\ReadDataView
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\WriteDataView.baml
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\RegisterView.g.cs
 C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\View\RegisterView.baml
-C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\net6.0-windows\PlcApp_Content.g.cs
