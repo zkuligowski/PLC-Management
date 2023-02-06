@@ -2,7 +2,7 @@
 <strong>Used Technologies:</strong>
 - .NET (C#, WPF, S7netplus),
 - Databases (MSSQL, Dapper, MSSMS),
-- Design Patter MVVM (Model-View-ViewModel),
+- Design Pattern MVVM (Model-View-ViewModel),
 - Code Analyzers (Sonar-Analyzers, StyleCop-Analyzers, Ndepend),
 - JSON Serialization,
 - PLC (TiaPortal, Siemens).
