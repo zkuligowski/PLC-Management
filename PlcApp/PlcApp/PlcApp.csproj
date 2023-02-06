@@ -5,20 +5,43 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Images\favicon.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="View\LoginView - Copy.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\back-image.jpg" />
+    <None Remove="Images\back-image.png" />
+    <None Remove="Images\key-icon.png" />
+    <None Remove="Images\logo-image.png" />
+    <None Remove="Images\logo.png" />
+    <None Remove="Images\user-icon.png" />
+    <None Remove="Properties\stylecop.json" />
+  </ItemGroup>
 
   <ItemGroup>
     <Page Remove="Views\App.xaml" />
   </ItemGroup>
 
   <ItemGroup>
-    <ApplicationDefinition Include="Views\App.xaml">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </ApplicationDefinition>
+    <AdditionalFiles Include="Properties\stylecop.json" />
+    <ApplicationDefinition Include="Views\App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\favicon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="FontAwesome.Sharp" Version="6.1.1" />
     <PackageReference Include="S7netplus" Version="0.14.0" />
     <PackageReference Include="SonarAnalyzer.CSharp" Version="8.45.0.54064">
       <PrivateAssets>all</PrivateAssets>
@@ -48,9 +71,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Update="Views\MainWindow.xaml">
+    <Page Update="View\LoginView.xaml">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\back-image.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\key-icon.png" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\user-icon.png" />
   </ItemGroup>
 
 </Project>

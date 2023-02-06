@@ -1,6 +1,8 @@
-﻿
+﻿// Copyright Zbigniew Kuligowski. All Rights Reserved.
+
 namespace PlcApp
 {
+    using PlcApp.View;
     using System;
     using System.Collections.Generic;
     using System.Configuration;
@@ -14,5 +16,19 @@ namespace PlcApp
     /// </summary>
     public partial class App : Application
     {
+        protected void ApplicationStart(object sender, StartupEventArgs e)
+        {
+            var loginView = new LoginView();
+            loginView.Show();
+            loginView.IsVisibleChanged += (s, ev) =>
+            {
+                if (loginView.IsVisible == false && loginView.IsLoaded)
+                {
+                    var mainView = new MainView();
+                    mainView.Show();
+                    loginView.Close();
+                }
+            };
+        }
     }
 }

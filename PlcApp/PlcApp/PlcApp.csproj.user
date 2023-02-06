@@ -2,27 +2,51 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="Views\LoginWindow.xaml.cs">
+    <Compile Update="CustomControls\BindablePasswordBox.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\RegistrationWindow.xaml.cs">
+    <Compile Update="View\ConnectionView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\SCADA.xaml.cs">
+    <Compile Update="View\HomeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ReadDataView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\RegisterView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\WriteDataView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Views\LoginWindow.xaml">
+    <Page Update="CustomControls\BindablePasswordBox.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\MainWindow.xaml">
+    <ApplicationDefinition Update="Views\App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Update="Styles\ButtonStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\RegistrationWindow.xaml">
+    <Page Update="View\ConnectionView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\SCADA.xaml">
+    <Page Update="View\HomeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\LoginView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ReadDataView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\RegisterView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\WriteDataView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

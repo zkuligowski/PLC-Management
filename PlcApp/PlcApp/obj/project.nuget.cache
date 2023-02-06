@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "/jFZyA3Ae/f5uSMK6NzA2yP6tajt4VA0DaVrzS3nksIuJid+QkNEFRnKck0Cxzuia8Jvjwr7j1H5Nbr0cCt0Ew==",
+  "dgSpecHash": "fCikMdlUZNDZftl7wZ67TKBmQPkbD6i6UypS64Bq/C8HplZ9yNOweF0I0wu5sFCD8FOBZMvdyda1bCplvdrP1Q==",
   "success": true,
   "projectFilePath": "C:\\Repos\\PLC-Management\\PlcApp\\PlcApp\\PlcApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Zbyszek\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\Zbyszek\\.nuget\\packages\\fontawesome.sharp\\6.1.1\\fontawesome.sharp.6.1.1.nupkg.sha512",
     "C:\\Users\\Zbyszek\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Zbyszek\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Zbyszek\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
