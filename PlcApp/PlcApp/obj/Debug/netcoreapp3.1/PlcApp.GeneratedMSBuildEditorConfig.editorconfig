@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = PlcApp
+build_property.ProjectDir = C:\Repos\PLC-Management\PlcApp\PlcApp\

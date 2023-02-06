@@ -1,0 +1,13 @@
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\netcoreapp3.1\PlcApp.csproj.AssemblyReference.cache
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\netcoreapp3.1\Styles\UIColors.baml
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\netcoreapp3.1\CustomControls\BindablePasswordBox.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\netcoreapp3.1\Views\LoginWindow.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\netcoreapp3.1\Views\MainWindow.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\netcoreapp3.1\Views\RegistrationWindow.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\netcoreapp3.1\Views\SCADA.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\netcoreapp3.1\View\LoginView.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\netcoreapp3.1\View\MainView.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\netcoreapp3.1\Views\App.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\netcoreapp3.1\PlcApp_MarkupCompile.cache
+C:\Repos\PLC-Management\PlcApp\PlcApp\obj\Debug\netcoreapp3.1\PlcApp_MarkupCompile.lref
